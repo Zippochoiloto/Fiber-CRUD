@@ -6,6 +6,7 @@ import (
 	"github.com/Zippochoiloto/golang-fiber-basic-todo-app/config"
 	"github.com/Zippochoiloto/golang-fiber-basic-todo-app/routes"
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/joho/godotenv"
 )
@@ -13,6 +14,7 @@ import (
 func main() {
 	app := fiber.New()
 	app.Use(logger.New())
+	app.Use(cors.New())
 
 	//dot env
 	err := godotenv.Load()
@@ -49,5 +51,6 @@ func setUpRoutes(app *fiber.App) {
 	})
 
 	routes.TodoRoute(api.Group("/todos"))
+	routes.UserRoute(api.Group("/auth"))
 
 }
