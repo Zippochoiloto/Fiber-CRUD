@@ -12,6 +12,7 @@ require (
 	github.com/valyala/fasthttp v1.24.0 // indirect
 	github.com/valyala/tcplisten v1.0.0 // indirect
 	go.mongodb.org/mongo-driver v1.5.1
+	golang.org/x/crypto v0.0.0-20210220033148-5ea612d1eb83 // indirect
 	golang.org/x/sys v0.0.0-20210502180810-71e4cd670f79 // indirect
 	gopkg.in/yaml.v2 v2.3.0 // indirect
 )

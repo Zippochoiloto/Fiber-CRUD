@@ -16,4 +16,6 @@ func TodoRoute(route fiber.Router) {
 
 func UserRoute(route fiber.Router) {
 	route.Post("login", controllers.Login)
+	route.Post("register", controllers.CreateUser)
+	route.Post("change-password", controllers.ChangePassword)
 }
